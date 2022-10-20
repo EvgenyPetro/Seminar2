@@ -1,6 +1,18 @@
 ﻿Console.Write("Введите трехзначное число: ");
-String numberA = Console.ReadLine();
 
-char[] characters = numberA.ToCharArray();
+try
+{
+    String? numberA = Console.ReadLine();
+    if (numberA != null)
+    {
+        char[] characters = numberA.ToCharArray();
+        Console.WriteLine(characters[1]);
+    }
+}
+catch {
+    Console.WriteLine("Error programm");
+}
 
-Console.WriteLine(characters[1]);
+
+
+
