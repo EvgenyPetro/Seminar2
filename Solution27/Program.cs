@@ -9,13 +9,12 @@ int x = Convert.ToInt32(Console.ReadLine());
 int GetSum(int number)
 {
     int sum = 0;
-    int num = number;
 
-    while (num > 0)
+    while (number > 0)
     {
-        int endNumber = num % 10;
+        int endNumber = number % 10;
         sum += endNumber;
-        num = num / 10;
+        number = number / 10;
     }
     return (sum);
 }

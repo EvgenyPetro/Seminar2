@@ -5,25 +5,18 @@
 Console.WriteLine("Введите длину массива: ");
 int lengtArray = Convert.ToInt32(Console.ReadLine());
 
-void GetRandomArray(int lengtArray)
+int[] GetRandomArray(int lengtArray)
 {
-    Console.Write("[");
+
     int[] array = new int[lengtArray];
 
     for (int i = 0; i < lengtArray; i++)
     {
         int randomNumber = new Random().Next();
         array[i] = randomNumber;
-        if (i == lengtArray - 1)
-        {
-            Console.Write(array[i] + "]");
-        }
-        else
-        {
-            Console.Write(array[i] + ",");
-        }
     }
+    return array;
 }
 
-GetRandomArray(lengtArray);
+Console.WriteLine($" [{String.Join(",", GetRandomArray(lengtArray))}]");
 

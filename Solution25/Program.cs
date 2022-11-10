@@ -2,9 +2,14 @@
 //3, 5 -> 243 (3⁵)
 //2, 4 -> 16
 
-void Kube(int a, int b)
+void Exponentiation(int a, int b)
 {
-    Console.Write(Math.Pow(b, a));
+    int sum = b;
+    for (int i = 1; i < a; i++)
+    {
+        sum *= b;
+    }
+    Console.Write(sum);
 }
 
 Console.WriteLine("Введите первое число: ");
@@ -12,4 +17,4 @@ int b = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Введите второе число: ");
 int a = Convert.ToInt32(Console.ReadLine());
 
-Kube(a, b);
+Exponentiation(a, b);
