@@ -7,7 +7,6 @@ int DiffBetweenMaxMinArrayElements()
     int[] randomArray = new int [random.Next(3, 10)];
     int max = Int32.MinValue;
     int min = Int32.MaxValue;
-    int diffBetweenMaxMinArrayElements = 0;
     for (int i = 0; i < randomArray.Length; i++)
     {
         randomArray[i] = random.Next(-100, 100);
@@ -21,7 +20,7 @@ int DiffBetweenMaxMinArrayElements()
         }
     }
 
-    diffBetweenMaxMinArrayElements = max - min;
+    int diffBetweenMaxMinArrayElements = max - min;
 
     Console.Write($" [{String.Join(",", randomArray)}] ");
     Console.WriteLine();
