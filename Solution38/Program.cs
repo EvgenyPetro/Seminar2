@@ -5,8 +5,8 @@ int DiffBetweenMaxMinArrayElements()
 {
     Random random = new Random();
     int[] randomArray = new int [random.Next(3, 10)];
-    int max = 0;
-    int min = 100;
+    int max = Int32.MinValue;
+    int min = Int32.MaxValue;
     int diffBetweenMaxMinArrayElements = 0;
     for (int i = 0; i < randomArray.Length; i++)
     {
