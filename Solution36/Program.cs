@@ -7,14 +7,10 @@ int SumOddElementsInArray()
     Random random = new Random();
     int[] randomArray = new int [random.Next(3, 10)];
     int sumOddElements = 0;
-    for (int i = 0; i < randomArray.Length; i++)
+    for (int i = 1; i < randomArray.Length; i = i + 2)
     {
         randomArray[i] = random.Next(-100, 100);
-
-        if (i % 2 != 0)
-        {
-            sumOddElements += randomArray[i];
-        }
+        sumOddElements += randomArray[i];
     }
 
     Console.Write($" [{String.Join(",", randomArray)}] ");
