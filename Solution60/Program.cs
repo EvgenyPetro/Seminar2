@@ -15,16 +15,17 @@ void GetRandom3DArray(int x, int y, int z)
     }
 
     int[,,] random3DArray = new int[x, y, z];
-    int[] tempArray = GetUnicArray(x * y * z);
+    int[] tempArray = GetUnicArray(random3DArray.Length);
     int elementOfArray = 0;
     for (int i = 0; i < z; i++)
     {
+        Console.WriteLine("Sloy " + (i + 1));
         for (int j = 0; j < x; j++)
         {
             for (int k = 0; k < y; k++)
             {
                 random3DArray[j, k, i] = tempArray[elementOfArray++];
-                Console.Write($"{random3DArray[j, k, i]}({j},{k},{i}) ");
+                Console.Write($"{random3DArray[j, k, i]} ");
             }
 
             Console.WriteLine();
@@ -70,7 +71,7 @@ bool Contains(int[] array, int element)
 
 try
 {
-    GetRandom3DArray(5, 4, 4);
+    GetRandom3DArray(4, 4, 5);
 }
 catch (Exception exception)
 {

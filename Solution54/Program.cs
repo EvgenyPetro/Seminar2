@@ -10,7 +10,7 @@
 
 int[,] SortArray(int[,] array)
 {
-    for (int i = 0; i < array.GetLength(1); i++)
+    for (int i = 0; i < array.GetLength(0); i++)
     {
         SortLinesOfArray(i, array);
     }
@@ -20,12 +20,12 @@ int[,] SortArray(int[,] array)
 
 void SortLinesOfArray(int lines, int[,] array)
 {
-    for (int j = 0; j < array.GetLength(0) - 1; j++)
+    for (int j = 0; j < array.GetLength(1) - 1; j++)
     {
-        for (int k = 0; k < array.GetLength(0) - j - 1; k++)
+        for (int k = 0; k < array.GetLength(1) - j - 1; k++)
         {
             int temp = array[lines, k];
-            if (array[lines, k] > array[lines, k + 1])
+            if (array[lines, k] < array[lines, k + 1])
             {
                 array[lines, k] = array[lines, k + 1];
                 array[lines, k + 1] = temp;
@@ -37,8 +37,8 @@ void SortLinesOfArray(int lines, int[,] array)
 int[,] GetRandomArray()
 {
     Random random = new Random();
-    int lines = random.Next(4, 4);
-    int colums = random.Next(4, 4);
+    int lines = random.Next(4, 10);
+    int colums = random.Next(4, 10);
 
     int[,] randomArray = new int[lines, colums];
     for (int i = 0; i < lines; i++)
