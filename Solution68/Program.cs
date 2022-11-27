@@ -17,9 +17,9 @@ int Akkerman(int M, int N)
     else if (M > 0 && N == 0)
     {
         return Akkerman(M - 1, 1);
-    } else 
-
-    return Akkerman(M-1, Akkerman(M, N-1));
+    }
+    else
+        return Akkerman(M - 1, Akkerman(M, N - 1));
 }
 
 Console.WriteLine($"Sum = {Akkerman(M, N)}");
